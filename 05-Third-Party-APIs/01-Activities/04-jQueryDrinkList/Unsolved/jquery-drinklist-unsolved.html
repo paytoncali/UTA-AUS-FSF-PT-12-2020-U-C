@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -27,7 +28,17 @@
 
     // Using JavaScript programmatically append each drinkList item to the "drink-options" div
     // HINT: you will need a for loop to go over each element in the list
+    var drinkoptionsEl = $("#drink-options"); 
 
+    for (var i=0; i < drinkList.length; i++){
+      var el = $('<div>');
+      el.text(drinkList[i]);
+      drinkoptionsEl.append(el);
+    }
+
+    $('<div>').each(function(){
+      this.style.color = "green";
+    });
 
   </script>
 

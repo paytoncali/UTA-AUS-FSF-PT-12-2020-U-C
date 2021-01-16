@@ -5,6 +5,8 @@ var msgDiv = document.querySelector("#msg");
 var userEmailSpan = document.querySelector("#user-email");
 var userPasswordSpan = document.querySelector("#user-password");
 
+
+
 renderLastRegistered();
 
 function displayMessage(type, message) {
@@ -13,7 +15,10 @@ function displayMessage(type, message) {
 }
 
 function renderLastRegistered() {
-  // TODO: Retrieve the last email and password and render it to the page
+  var userEmail = localStorage.getItem("email");
+  userEmailSpan.textContent = userEmail;
+  var userPassword = localStorage.getItem("password");
+  userPasswordSpan.textContent = userPassword;
 }
 
 signUpButton.addEventListener("click", function(event) {
@@ -28,7 +33,9 @@ signUpButton.addEventListener("click", function(event) {
     displayMessage("error", "Password cannot be blank");
   } else {
     displayMessage("success", "Registered successfully");
-
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+    renderLastRegistered();
   // TODO: Save email and password to localStorage and render the last registered user
   }
 });

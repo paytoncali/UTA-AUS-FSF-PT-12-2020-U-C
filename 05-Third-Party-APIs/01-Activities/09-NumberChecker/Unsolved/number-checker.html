@@ -61,12 +61,23 @@
 
         <script type="text/javascript">
           $(document).ready(function() {
+              var number1 = $('#button-1')
+              var number2 = $('#button-2')
+              var number3 = $('#button-3')
+              var number4 = $('#button-4')
+              var computerPick = $('#computer-pick')
 
             // Here we create the on click event that gets the user's pick
             $(".btn-choice").on("click", function() {
-
+              var computerRandom = Math.floor(Math.random() * 4) + 1;
+                computerPick.text(computerRandom);
+              
+               var numbervalue = "1"
+                number1.text(numbervalue);
+              
+              
               console.log("You clicked a button!!");
-
+              
               // Add code to have the computer guess a random number between 1 and 4
               // Then determine which button was clicked
               // Compare the computer and user guess

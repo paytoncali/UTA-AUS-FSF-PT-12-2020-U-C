@@ -1,0 +1,12 @@
+a:hover {
+    background-color: seagreen;
+}
+
+a:focus {
+    background-color: black;
+}
+
+a:active {
+    background-color: sienna;
+}
+

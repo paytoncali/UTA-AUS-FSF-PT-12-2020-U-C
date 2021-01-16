@@ -18,6 +18,8 @@ If you have completed this activity, work through the following challenge with y
 
 * How would you log the `length` property of the `window` object?  
 
+ <!-- window.length -->
+
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---

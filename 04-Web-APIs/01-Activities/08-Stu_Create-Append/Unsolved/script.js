@@ -27,6 +27,11 @@ body.appendChild(favoriteEl);
 favoriteEl.appendChild(listEl);
 // Append ordered list 
 favoriteEl.appendChild(listEl);
+listEl.appendChild(li1);
+listEl.appendChild(li2);
+listEl.appendChild(li3);
+listEl.appendChild(li4);
+
 
 h1El.setAttribute("style", "margin:auto; width:50%; text-align:center;");
 infoEl.setAttribute("style", "margin:auto; width:50%; text-align:center;");
@@ -34,5 +39,14 @@ imgEl.setAttribute("src", "http://placekitten.com/200/300");
 nameEl.setAttribute("style", "font-size:25px; text-align:center;");
 kittenEl.setAttribute("style", "font-size:25px; text-align:center;");
 favoriteEl.setAttribute("style", "font-size:20px;");
+listEl.setAttribute("style", "background: #333333; padding: 20px;")
+li1.setAttribute("style", "color: white; padding: 5px; margin-left: 35px; background-color: pink;")
+li2.setAttribute("style", "color: white; padding: 5px; margin-left: 35px; background-color: blue;")
+li3.setAttribute("style", "color: white; padding: 5px; margin-left: 35px; background-color: purple;")
+li4.setAttribute("style", "color: white; padding: 5px; margin-left: 35px; background-color: yellow;")
 
 // TODO: Add ordered list items containing four favorite foods
+li1.textContent = "Catnip"
+li2.textContent = "Milk"
+li3.textContent = "Fish"
+li4.textContent = "More Catnip"
