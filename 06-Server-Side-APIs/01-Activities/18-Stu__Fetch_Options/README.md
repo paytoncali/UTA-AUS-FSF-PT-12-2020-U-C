@@ -11,8 +11,8 @@ Work with a partner to implement the following user story:
 ## 📝 Notes
 
 Refer to the documentation: 
-
-[MDN Web Docs on using fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+[MDN Web Docs on using fetch()]()
     
 ---
 
