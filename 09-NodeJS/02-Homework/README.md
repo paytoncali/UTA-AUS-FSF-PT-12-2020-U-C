@@ -85,7 +85,7 @@ This homework is graded based on the following criteria:
 
 ### Repository Quality: 13%
 
-* Repository has a unique name.
+<!-- * Repository has a unique name. -->
 
 * Repository follows best practices for file structure and naming conventions.
 
