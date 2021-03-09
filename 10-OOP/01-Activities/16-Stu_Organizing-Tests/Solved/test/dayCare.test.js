@@ -6,17 +6,21 @@ describe("DayCare", () => {
     it("should create an object with 'children' array, 'capacity' number, and 'ageLimit' number", () => {
       const dayCare = new DayCare();
 
+      // Verify that the new object has the correct properties
       expect(dayCare).toEqual({ children: [], capacity: 3, ageLimit: 6 });
     });
   });
 
   describe("addChild", () => {
     it("should add a child to the 'children' array", () => {
+      // Create new objects to test with
       const child = new Child("Tammy", 1);
       const dayCare = new DayCare();
 
+      // Add the child object to the dayCare object
       dayCare.addChild(child);
 
+      // Verify that the child was added to the children array
       expect(dayCare.children.length).toEqual(1);
       expect(dayCare.children[0]).toBe(child);
     });
@@ -24,23 +28,18 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
-      //const mock = jest.spyOn();
-      //mock.mockImplementation();
 
       dayCare.addChild(child);
 
+      // Verify that the child was not added to the array
       expect(dayCare.children.length).toEqual(0);
-      expect(mock).toBeCalledWith(
-        "Unable to add child, they are over the age limit"
-      );
-      mock.mockRestore();
     });
 
     it("should not add a child if already at capacity", () => {
       const dayCare = new DayCare();
       const child = new Child("Alice", 4);
-      const mock = jest.spyOn();
-      mock.mockImplementation();
+
+      // Add three initial objects to the children array
       dayCare.children = [
         new Child("Tammy", 1),
         new Child("Mark", 2),
@@ -49,20 +48,23 @@ describe("DayCare", () => {
 
       dayCare.addChild(child);
 
+      // Verify that the fourth child was not added to the array
       expect(dayCare.children.length).toEqual(3);
-      expect(mock).toBeCalledWith("At capacity, unable to add more children");
-
-      mock.mockRestore();
     });
 
     it("should throw an error if not provided a Child object as an argument", () => {
+      // Define the error message that is expected to be thrown
       const err = new Error(
         "Expected parameter 'child' to be an instance of Child"
       );
+
+      // Define the code that will throw an error inside a callback function
       const cb = () => {
         const dayCare = new DayCare();
         dayCare.addChild();
       };
+
+      // Verify that the callback function captured the error
       expect(cb).toThrowError(err);
     });
   });
@@ -73,18 +75,18 @@ describe("DayCare", () => {
       const child1 = new Child("Tammy", 1);
       const child2 = new Child("Mark", 2);
       const child3 = new Child("Alvin", 1);
-      const mock = jest.spyOn();
       dayCare.children = [child1, child2, child3];
-      mock.mockImplementation();
+
+      // Remove and return an object from the children array
       const removed = dayCare.pickupChild(child2.name);
 
       expect(removed).toBe(child2);
       expect(dayCare.children.length).toEqual(2);
+
+      // Verify that child2 is no longer in the children array
       expect(
         dayCare.children.some(child => child.name === child2.name)
       ).toEqual(false);
-      expect(mock).toBeCalledWith(`Picked up ${child2.name} from day care`);
-      mock.mockRestore();
     });
 
     it("should return undefined and remove no children if child is not in 'children'", () => {
@@ -92,16 +94,16 @@ describe("DayCare", () => {
       const child1 = new Child("Tammy", 1);
       const child2 = new Child("Mark", 2);
       const child3 = new Child("Alvin", 1);
-      const mock = jest.spyOn();
       dayCare.children = [child1, child2, child3];
-      mock.mockImplementation();
+
+      // Attempt to pick up a child that doesn't exist
       const removed = dayCare.pickupChild("Fred");
 
+      // Verify that the returned object is undefined
       expect(typeof removed).toEqual("undefined");
-      expect(dayCare.children).toEqual([child1, child2, child3]);
-      expect(mock).toBeCalledWith("Child not found");
 
-      mock.mockRestore();
+      // Verify that no object was removed from the array
+      expect(dayCare.children).toEqual([child1, child2, child3]);
     });
   });
 });
