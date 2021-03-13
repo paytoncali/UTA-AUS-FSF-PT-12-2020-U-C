@@ -24,8 +24,8 @@ describe("DayCare", () => {
     it("should not add a child over the 'ageLimit'", () => {
       const child = new Child("Tammy", 8);
       const dayCare = new DayCare();
-      //const mock = jest.spyOn();
-      //mock.mockImplementation();
+      const mock = jest.spyOn();
+      mock.mockImplementation();
 
       dayCare.addChild(child);
 
