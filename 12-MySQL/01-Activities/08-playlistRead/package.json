@@ -1,0 +1,17 @@
+{
+  "name": "08-playlistRead",
+  "version": "1.0.0",
+  "description": "* If you haven't already, create a database called `playlistDB`, then create a table inside of this database called `songs`. The songs table should have four columns:",
+  "main": "playlistRead.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
