@@ -23,7 +23,7 @@ const questions = () => {
         name: 'postbid',
         choices: ["POST", "BID",]
         }
-    .then(data => {
+    .then((data) => {
         console.log("selection: ", choices);
         switch(selection) {
             case "POST":
