@@ -14,8 +14,8 @@ Location.init(
       autoIncrement: true
     },
     location_name: {
-      type: DataTypes.STRING,
-      allowNull: false
+            type: DataTypes.STRING,
+            allowNull: false
     }
   },
   {
