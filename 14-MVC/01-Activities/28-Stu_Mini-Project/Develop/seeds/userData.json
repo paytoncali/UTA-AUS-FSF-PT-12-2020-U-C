@@ -13,6 +13,7 @@
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
     "password": "password12345"
+<<<<<<< HEAD
   },
   {
     "name": "Jordan",
@@ -23,5 +24,7 @@
     "name": "Blake",
     "email": "the_blake@yahoo.com",
     "password": "password12345"
+=======
+>>>>>>> c21a56728fd5bafae3cf1a4d3542391abe425d5a
   }
 ]
